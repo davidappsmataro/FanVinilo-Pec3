@@ -1,11 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register Page</title>
     <link rel="stylesheet" href="output.css">
+    <script
+        defer
+        src="https://kit.fontawesome.com/fa121e3cca.js"
+        crossorigin="anonymous"></script>
+    <script src="./js/sidebar.js" defer></script>
 
 </head>
 
