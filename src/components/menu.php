@@ -30,8 +30,8 @@
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./index.php">Home</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./random-post.php">Disco</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./records.php">Discos</a></li>
-                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">API_discos</a></li>
-                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="#">API_disco</a></li>
+                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/records/1" target="_blank">API_discos</a></li>
+                        <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/record/1" target="_blank">API_disco</a></li>
                     </ul>
                 </nav>
             </div>
@@ -47,7 +47,7 @@
         </div>
     </nav>
 </header>
-<aside id="sidebar" class="translate-x-full">
+<aside id="sidebar" class="translate-x-full transform transition-all duration-200 z-20 right-0 top-0">
     <div class="md:hidden">
 
         <!-- background en negro -->
@@ -80,8 +80,8 @@
                         </a></li>
                     <li class="w-full h-px bg-gray-200 my-10"></li>
 
-                    <li><a href="#" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_discos</a></li>
-                    <li><a href="#" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_disco</a></li>
+                    <li><a href="./api/records/1" target="_blank" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_discos</a></li>
+                    <li><a href="./api/record/1" target="_blank" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_disco</a></li>
                     <li class="w-full h-px bg-gray-200 my-10"></li>
                     
                     <li><a href="./login.php" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">
