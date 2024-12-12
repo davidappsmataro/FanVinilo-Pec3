@@ -1,6 +1,6 @@
 <!-- component -->
 <main class="container mx-auto flex flex-col flex-grow mt-10 max-w-full">
-    <h1 class="block font-sans text-3xl antialiased font-bold leading-normal text-blue-500 text-center uppercase"> <?php echo $titulo ? $titulo : 'Título'; ?></h1>
+    <h1 class="block font-sans text-3xl antialiased font-bold leading-normal text-blue-500 text-center uppercase"> <?php echo $titulo ?></h1>
     <div class="flex flex-col md:flex-row justify-center items-center md:items-start mt-5">
         <div class="mx-4 mt-4 overflow-hidden text-gray-700 max-w-full w-96 rounded-xl shadow-md   ">
             <?php

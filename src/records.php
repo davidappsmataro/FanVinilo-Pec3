@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('./data/db_config.php');
 
 ?>
@@ -30,6 +31,9 @@ include('./data/db_config.php');
 
   <?php
   include_once('./components/menu.php');
+  if (isset($_SESSION['username'])) {
+    echo '<p class="text-center mt-10 text-lg text-blue-900 font-light">Hola! Nos alegramos de volverte a ver, <span class="uppercase font-bold"> ' . $_SESSION['username'] . '</span></p>';
+  }
   ?>
   <h1 class="text-center mt-10 text-4xl text-blue-500 font-light">
     La colección de FanVinilo

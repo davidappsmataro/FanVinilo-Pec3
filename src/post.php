@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('./data/db_config.php')
 ?>
 <!DOCTYPE html>
@@ -27,7 +28,9 @@ include('./data/db_config.php')
 
    <?php
    include_once('./components/menu.php');
-
+   if (isset($_SESSION['username'])) {
+      echo '<p class="text-center mt-10 text-lg text-blue-900 font-light">Hola! Nos alegramos de volverte a ver, <span class="uppercase font-bold"> ' . $_SESSION['username'] . '</span></p>';
+    }
    if (!isset($_GET['id']) ||  $_GET['id'] == "") {
       include('./components/not_found.php');
       include_once('./components/footer.php');

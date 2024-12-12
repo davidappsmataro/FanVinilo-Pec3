@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('./data/db_config.php')
 ?>
 <!DOCTYPE html>
@@ -28,12 +29,12 @@ include('./data/db_config.php')
 
   <?php
   include_once('./components/menu.php');
-  ?>
-
-  <?php
+  if (isset($_SESSION['username'])) {
+    echo '<p class="text-center mt-10 text-lg text-blue-900 font-light">Hola! Nos alegramos de volverte a ver, <span class="uppercase font-bold"> ' . $_SESSION['username'] . '</span></p>';
+  }
 
   try {
-    
+
     setlocale(LC_TIME, 'es_ES.UTF-8');
     //https://es.stackoverflow.com/questions/395459/fecha-en-espa%C3%B1ol 
     $formatter = new IntlDateFormatter('es_ES', IntlDateFormatter::LONG, IntlDateFormatter::NONE, 'Europe/Madrid', IntlDateFormatter::GREGORIAN, 'MMMM yyyy');

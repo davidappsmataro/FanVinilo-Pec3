@@ -1,3 +1,10 @@
+<?php
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
+
+
+?>
 <header class="flex-none">
     <!-- component -->
     <nav id="header" class="w-full z-30 top-10 py-1 bg-white shadow-lg border-b border-blue-400">
@@ -32,6 +39,10 @@
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./records.php">Discos</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/records/1" target="_blank">API_discos</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/record/1" target="_blank">API_disco</a></li>
+                        <?php if (isset($_SESSION['username'])): ?>
+                            <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./Perfil.php">Perfil de Usuario</a></li>
+                        <?php endif; ?>
+
                     </ul>
                 </nav>
             </div>
@@ -39,11 +50,17 @@
 
             <div class="order-2 md:order-3 flex flex-wrap items-center justify-end mr-0 md:mr-4" id="nav-content">
                 <div class="auth flex items-center w-full md:w-full">
-                    <a href="./login.php" class="bg-transparent text-gray-800  p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Inicia Sesión</a>
-                    <a href="./signup.php" class="bg-blue-500 text-gray-200  p-2 rounded  hover:bg-blue-400 hover:text-gray-100">Registro</a>
+                    <?php if (isset($_SESSION['username'])): ?>
+
+                        <a href="./logout.php" class="bg-transparent text-gray-800 p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Logout</a>
+                    <?php else: ?>
+                        <a href="./login.php" class="bg-transparent text-gray-800 p-2 rounded border border-gray-300 mr-4 hover:bg-gray-100 hover:text-gray-700">Login</a>
+                        <a href="./signup.php" class="bg-blue-500 text-gray-200 p-2 rounded hover:bg-blue-400 hover:text-gray-100">Sign Up</a>
+                    <?php endif; ?>
 
                 </div>
             </div>
+        </div>
         </div>
     </nav>
 </header>
@@ -82,20 +99,27 @@
 
                     <li><a href="./api/records/1" target="_blank" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_discos</a></li>
                     <li><a href="./api/record/1" target="_blank" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">API_disco</a></li>
-                    <li class="w-full h-px bg-gray-200 my-10"></li>
-                    
-                    <li><a href="./login.php" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">
+
+                    <?php if (isset($_SESSION['username'])): ?>
+                        <li class="w-full h-px bg-gray-200 my-10"></li>
+                        <li><a href="./perfil.php" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">
+                                <i class="fa-solid fa-user text-blue-500"></i>
+                                <span class="ml-3">Perfil de Usuario</span>
+                            </a></li>
+                    <?php endif; ?>
+                    <!--<li><a href="./login.php" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">
                             <i class="fa-solid fa-right-to-bracket text-blue-500"></i>
                             <span class="ml-3">Iniciar Sesión</span>
                         </a></li>
+
                     <li><a href="./signup.php" class="flex items-center p-2 hover:bg-blue-200 rounded transition-all text-2xl ">
-                    <i class="fa-solid fa-user-plus text-blue-500"></i>
+                            <i class="fa-solid fa-user-plus text-blue-500"></i>
                             <span class="ml-3">Registro</span>
-                        </a></li>
-                    
+                        </a></li> -->
+
 
                 </ul>
-               
+
             </div>
 
         </nav>

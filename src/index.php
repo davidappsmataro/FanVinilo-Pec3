@@ -1,4 +1,5 @@
 <?php
+session_start();
 include('./data/db_config.php')
 ?>
 <!DOCTYPE html>
@@ -9,7 +10,7 @@ include('./data/db_config.php')
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="David Pecharromán" />
-  <meta name="description" content="Todas las giras de los Rolling Stones." />
+  <meta name="description" content="FanVinilo la página de tus discos favoritos" />
   <title>Inicio | FanVinilo</title>
   <link
     rel="icon"
@@ -28,8 +29,11 @@ include('./data/db_config.php')
 
   <?php
   include_once('./components/menu.php');
-
+  if (isset($_SESSION['username'])) {
+    echo '<p class="text-center mt-10 text-lg text-blue-900 font-light">Hola! Nos alegramos de volverte a ver, <span class="uppercase font-bold"> ' . $_SESSION['username'] . '</span></p>';
+  }
   ?>
+  
   <h1 class="text-center mt-10 text-4xl text-blue-500 font-light">
     Destacados de la Semana
   </h1>
