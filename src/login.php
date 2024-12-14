@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['nombre'] = $user_nombre;
                     $_SESSION['apellidos'] = $user_apellidos;
                     header("Location: perfil.php");
-                    echo "Login correcto";
+                  
                     exit;
                 } else {
                     //Mensaje genérico sin especificar si es el usuario o la contraseña

@@ -1,4 +1,5 @@
 <?php
+//nos aseguramos de que la sesión esté iniciada
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
@@ -40,7 +41,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/records/1" target="_blank">API_discos</a></li>
                         <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./api/record/1" target="_blank">API_disco</a></li>
                         <?php if (isset($_SESSION['username'])): ?>
-                            <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./Perfil.php">Perfil de Usuario</a></li>
+                            <li><a class="inline-block no-underline hover:text-black font-medium text-lg py-2 px-4 lg:-ml-2" href="./perfil.php">Perfil de Usuario</a></li>
                         <?php endif; ?>
 
                     </ul>

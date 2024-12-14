@@ -100,7 +100,7 @@ include('./data/db_config.php');
       // Construir la consulta SQL dinámicamente
       //$consulta = "SELECT * FROM discos_pec3 WHERE 1=1";
 
-      if ($query_artista) {
+      if ($query_artista && $query_artista != '') {
         $consulta .= " AND artista LIKE '%" . $mysqli->real_escape_string($query_artista) . "%'";
       }
 

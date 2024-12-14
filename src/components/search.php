@@ -32,7 +32,7 @@
             <div class="flex sm:flex-row items-center justify-center flex-wrap">
                 <div class="flex flex-col">
                     <label for="artista" class="mb-2 text-sm text-start text-gray-900 font-bold">Artista</label>
-                    <input name="artista" id="artista" type="text" placeholder="Artista..." value="<?php echo htmlspecialchars($query_artista); ?>" class="flex items-center w-48 px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-white text-dark-grey-900 rounded-xl" />
+                    <input name="artista" id="artista" type="text" placeholder="Artista..." value="<?php echo $query_artista; ?>" class="flex items-center w-48 px-5 py-4 mr-2 text-sm font-medium outline-none focus:bg-grey-400 mb-7 placeholder:text-grey-700 bg-white text-dark-grey-900 rounded-xl" />
                 </div>
                 <div class="flex flex-col">
                     <label for="genero" class="mb-2 text-sm text-start text-gray-900 font-bold">Género Musical</label>

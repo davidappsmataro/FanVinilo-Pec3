@@ -55,6 +55,7 @@ include('./data/db_config.php')
         $precio = isset($fila['precio']) ? $fila['precio'] : '??';
         $imagen = isset($fila['imagen']) ? $fila['imagen'] : './assets/disco_640.jpg';
         $f_lanzamiento = isset($fila['f_lanzamiento']) ?  $formatter->format(new DateTime($fila['f_lanzamiento'])) : 'Fecha no disponible';
+        //$f_lanzamiento = isset($fila['f_lanzamiento']) ? $fila['f_lanzamiento'] : 'Fecha no disponible';
         $estado = isset($fila['estado']) ? $fila['estado'] : 'Estado no disponible';
         include('./components/disco.php');
       }

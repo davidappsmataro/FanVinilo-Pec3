@@ -21,7 +21,7 @@ try {
             $uri = $_SERVER['REQUEST_URI'];
             $uriTroceada = explode('/', trim($uri, '/'));
             $pagina = end($uriTroceada);
-            //sino hay id, le paso un 1
+            //sino hay pagina, le paso un 1
             $pagina == 'records' ? $pagina = 1 : $pagina;
             // Valido que el id sea un número. sino, lo ignoro y les paso un 1
             if (!is_numeric($pagina)) {
